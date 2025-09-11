@@ -1,1 +1,142 @@
+/* ===== ESTILOS CSS ===== */
+/* Estilos gerais da página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
 
+body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000;
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    width: 21cm;
+    min-height: 29.7cm;
+    margin: 0 auto;
+    padding: 2.5cm 3cm;
+}
+
+/* Estilos de tipografia */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.5cm;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 14pt;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 2cm;
+}
+
+h2 {
+    font-size: 12pt;
+    text-align: left;
+    margin-top: 1cm;
+}
+
+p {
+    margin-bottom: 0.5cm;
+    text-align: justify;
+    text-indent: 1.25cm;
+}
+
+/* Estilos para elementos específicos */
+.page {
+    page-break-after: always;
+    position: relative;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2cm;
+}
+
+.footer {
+    position: absolute;
+    bottom: 1cm;
+    width: 100%;
+    text-align: center;
+    font-size: 10pt;
+}
+
+.center {
+    text-align: center;
+}
+
+.right {
+    text-align: right;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.signature-line {
+    border-top: 1px solid #000;
+    width: 8cm;
+    margin: 1cm auto;
+    padding-top: 0.2cm;
+    text-align: center;
+}
+
+/* Estilos para lista de figuras e tabelas */
+.list-container {
+    margin-left: 1.25cm;
+}
+
+.list-item {
+    margin-bottom: 0.3cm;
+}
+
+/* Estilos para referências bibliográficas */
+.reference {
+    margin-bottom: 0.3cm;
+    text-indent: -1.25cm;
+    padding-left: 1.25cm;
+    text-align: left;
+}
+
+/* Estilos para citações */
+.quote {
+    margin: 0.5cm 1.25cm;
+    font-style: italic;
+}
+
+/* Botão de impressão (não aparece na impressão) */
+@media screen {
+    .print-button {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+    
+    .print-button:hover {
+        background-color: #45a049;
+    }
+}
+
+@media print {
+    .print-button {
+        display: none;
+    }
+}

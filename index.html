@@ -1,1 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCC - Sistema de Apoio ao Aprendizado Personalizado com IA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="print-button" onclick="window.print()">Salvar como PDF</button>
 
+    <!-- CAPA -->
+    <div class="page">
+        <div class="header">
+            <p class="bold uppercase">Colégio Estadual Helena Wysocki</p>
+            <p class="bold uppercase">Curso Técnico em Desenvolvimento de Sistemas</p>
+        </div>
+        
+        <div class="center">
+            <p style="margin-top: 8cm;">Vitor Adriano Dias Ribeiro</p>
+            <h1 class="uppercase">Sistema de Apoio ao Aprendizado Personalizado com IA</h1>
+        </div>
+        
+        <div class="footer">
+            <p>CURITIBA</p>
+            <p>2024</p>
+        </div>
+    </div>
+
+    <!-- FOLHA DE ROSTO -->
+    <div class="page">
+        <div class="center">
+            <p style="margin-top: 8cm;">Vitor Adriano Dias Ribeiro</p>
+            <h1 class="uppercase">Sistema de Apoio ao Aprendizado Personalizado com IA</h1>
+            
+            <p style="margin-top: 2cm; text-indent: 0;">Trabalho de Conclusão de Curso apresentado ao Curso Técnico em Desenvolvimento de Sistemas do Colégio Estadual Helena Wysocki, como requisito parcial para a obtenção do título de Técnico em Desenvolvimento de Sistemas.</p>
+            
+            <p style="margin-top: 2cm; text-indent: 0;">Orientadora: Professora Mayara</p>
+        </div>
+        
+        <div class="footer">
+            <p>CURITIBA</p>
+            <p>2024</p>
+        </div>
+    </div>
+
+    <!-- FOLHA DE APROVAÇÃO -->
+    <div class="page">
+        <div class="center">
+            <h1 class="uppercase">Folha de Aprovação</h1>
+            
+            <p style="margin-top: 2cm; text-indent: 0;">Vitor Adriano Dias Ribeiro</p>
+            <p class="bold uppercase">Sistema de Apoio ao Aprendizado Personalizado com IA</p>
+            
+            <p style="margin-top: 1cm; text-indent: 0;">Trabalho de Conclusão de Curso aprovado como requisito parcial para a obtenção do título de Técnico em Desenvolvimento de Sistemas pelo Colégio Estadual Helena Wysocki.</p>
+            
+            <p style="margin-top: 1cm; text-indent: 0;">Data da Aprovação: ___/___/_____</p>
+            
+            <p style="margin-top: 1cm; text-indent: 0;" class="bold">BANCA EXAMINADORA:</p>
+            
+            <div class="signature-line">
+                <p>Profa. Mayara - Orientadora</p>
+                <p>Colégio Estadual Helena Wysocki</p>
+            </div>
+            
+            <div class="signature-line">
+                <p>_________________________________________________</p>
+                <p>Nome do Avaliador 1</p>
+                <p>Instituição</p>
+            </div>
+            
+            <div class="signature-line">
+                <p>_________________________________________________</p>
+                <p>Nome do Avaliador 2</p>
+                <p>Instituição</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- DEDICATÓRIA -->
+    <div class="page">
+        <div class="center">
+            <h1 class="uppercase">Dedicatória</h1>
+            
+            <p style="margin-top: 4cm; text-indent: 0; font-style: italic;">
+                Dedico este trabalho à minha família, que sempre me apoiou em todos os momentos, 
+                e aos meus professores, que me incentivaram a buscar conhecimento e a superar desafios.
+            </p>
+        </div>
+    </div>
+
+    <!-- AGRADECIMENTOS -->
+    <div class="page">
+        <h1 class="uppercase">Agradecimentos</h1>
+        
+        <p>
+            Agradeço primeiramente à Professora Mayara, pela orientação, paciência e dedicação durante todo o desenvolvimento deste trabalho.
+        </p>
+        
+        <p>
+            Agradeço aos meus colegas de curso pelo apoio e pelas discussões enriquecedoras que contribuíram para o aprimoramento deste projeto.
+        </p>
+        
+        <p>
+            Agradeço também aos funcionários e direção do Colégio Estadual Helena Wysocki por proporcionarem a estrutura necessária para a realização desta pesquisa.
+        </p>
+        
+        <p>
+            Por fim, agradeço a todos que direta ou indiretamente contribuíram para a conclusão deste Trabalho de Conclusão de Curso.
+        </p>
+    </div>
+
+    <!-- EPÍGRAFE -->
+    <div class="page">
+        <div class="center">
+            <h1 class="uppercase">Epígrafe</h1>
+            
+            <p style="margin-top: 4cm; text-indent: 0; font-style: italic;">
+                "A educação é a arma mais poderosa que você pode usar para mudar o mundo."<br>
+                - Nelson Mandela
+            </p>
+            
+            <p style="margin-top: 2cm; text-indent: 0; font-style: italic;">
+                "O futuro pertence àqueles que acreditam na beleza de seus sonhos."<br>
+                - Eleanor Roosevelt
+            </p>
+        </div>
+    </div>
+
+    <!-- RESUMO -->
+    <div class="page">
+        <h1 class="uppercase">Resumo</h1>
+        
+        <p>
+            Este trabalho apresenta o desenvolvimento de um Sistema de Apoio ao Aprendizado Personalizado com Inteligência Artificial, destinado a estudantes do ensino médio. O sistema utiliza algoritmos de machine learning para adaptar o conteúdo educacional às necessidades individuais de cada aluno, oferecendo recomendações personalizadas de materiais de estudo e exercícios.
+        </p>
+        
+        <p>
+            A plataforma foi desenvolvida utilizando tecnologias web modernas, com um front-end em React.js, back-end em Node.js e banco de dados MongoDB. A implementação de algoritmos de recomendação permitiu criar um ambiente de aprendizado adaptativo que se ajusta ao ritmo e estilo de aprendizado de cada usuário.
+        </p>
+        
+        <p>
+            Os resultados demonstram que o sistema proposto é eficaz na personalização do aprendizado, contribuindo para a melhoria do desempenho acadêmico dos estudantes. O trabalho conclui que a aplicação de técnicas de inteligência artificial na educação pode potencializar significativamente o processo de ensino-aprendizagem.
+        </p>
+        
+        <p class="bold" style="text-indent: 0;">Palavras-chave: Aprendizado Personalizado. Inteligência Artificial. Educação. Sistema de Recomendação. Ensino Médio.</p>
+    </div>
+
+    <!-- ABSTRACT -->
+    <div class="page">
+        <h1 class="uppercase">Abstract</h1>
+        
+        <p>
+            This paper presents the development of a Personalized Learning Support System with Artificial Intelligence, aimed at high school students. The system uses machine learning algorithms to adapt educational content to the individual needs of each student, offering personalized recommendations of study materials and exercises.
+        </p>
+        
+        <p>
+            The platform was developed using modern web technologies, with a front-end in React.js, back-end in Node.js and MongoDB database. The implementation of recommendation algorithms allowed the creation of an adaptive learning environment that adjusts to the pace and learning style of each user.
+        </p>
+        
+        <p>
+            The results demonstrate that the proposed system is effective in personalizing learning, contributing to the improvement of students' academic performance. The work concludes that the application of artificial intelligence techniques in education can significantly enhance the teaching-learning process.
+        </p>
+        
+        <p class="bold" style="text-indent: 0;">Keywords: Personalized Learning. Artificial Intelligence. Education. Recommendation System. High School.</p>
+    </div>
+
+    <!-- LISTA DE FIGURAS -->
+    <div class="page">
+        <h1 class="uppercase">Lista de Figuras</h1>
+        
+        <div class="list-container">
+            <p class="list-item">Figura 1 - Arquitetura do sistema...................................................................15</p>
+            <p class="list-item">Figura 2 - Diagrama de casos de uso..............................................................16</p>
+            <p class="list-item">Figura 3 - Interface do usuário.....................................................................17</p>
+            <p class="list-item">Figura 4 - Fluxo de recomendação de conteúdo................................................18</p>
+            <p class="list-item">Figura 5 - Diagrama de entidade-relacionamento.............................................19</p>
+            <p class="list-item">Figura 6 - Resultados dos testes de usabilidade..............................................20</p>
+        </div>
+    </div>
+
+    <!-- LISTA DE TABELAS -->
+    <div class="page">
+        <h1 class="uppercase">Lista de Tabelas</h1>
+        
+        <div class="list-container">
+            <p class="list-item">Tabela 1 - Tecnologias utilizadas no desenvolvimento.....................................21</p>
+            <p class="list-item">Tabela 2 - Resultados da avaliação de desempenho.........................................22</p>
+            <p class="list-item">Tabela 3 - Comparativo de algoritmos de recomendação...................................23</p>
+            <p class="list-item">Tabela 4 - Dados demográficos dos usuários participantes...............................24</p>
+        </div>
+    </div>
+
+    <!-- SUMÁRIO -->
+    <div class="page">
+        <h1 class="uppercase">Sumário</h1>
+        
+        <div class="list-container">
+            <p class="list-item">1 INTRODUÇÃO.................................................................................12</p>
+            <p class="list-item">2 REFERENCIAL TEÓRICO......................................................................14</p>
+            <p class="list-item">2.1 Aprendizado personalizado...........................................................14</p>
+            <p class="list-item">2.2 Inteligência artificial na educação...................................................15</p>
+            <p class="list-item">2.3 Sistemas de recomendação.............................................................16</p>
+            <p class="list-item">3 METODOLOGIA...............................................................................18</p>
+            <p class="list-item">3.1 Tipo de pesquisa.......................................................................18</p>
+            <p class="list-item">3.2 Procedimentos técnicos...............................................................19</p>
+            <p class="list-item">3.3 População e amostra.................................................................20</p>
+            <p class="list-item">4 DESENVOLVIMENTO.........................................................................22</p>
+            <p class="list-item">4.1 Arquitetura do sistema................................................................22</p>
+            <p class="list-item">4.2 Implementação........................................................................23</p>
+            <p class="list-item">4.3 Funcionalidades......................................................................24</p>
+            <p class="list-item">5 RESULTADOS E DISCUSSÃO.................................................................26</p>
+            <p class="list-item">6 CONSIDERAÇÕES FINAIS....................................................................28</p>
+            <p class="list-item">REFERÊNCIAS................................................................................30</p>
+            <p class="list-item">APÊNDICES..................................................................................32</p>
+            <p class="list-item">ANEXOS.....................................................................................34</p>
+        </div>
+    </div>
+
+    <!-- INTRODUÇÃO -->
+    <div class="page">
+        <h1>1 INTRODUÇÃO</h1>
+        
+        <p>
+            O cenário educacional contemporâneo enfrenta desafios significativos relacionados à diversidade de perfis de aprendizagem e à necessidade de personalização do ensino. Com turmas numerosas e currículos padronizados, os educadores frequentemente encontram dificuldades para atender às necessidades individuais de cada estudante, resultando em deficiências no processo de ensino-aprendizagem.
+        </p>
+        
+        <p>
+            Neste contexto, a inteligência artificial emerge como uma ferramenta promissora para potencializar a educação, permitindo a criação de ambientes de aprendizado adaptativos que respondam às particularidades de cada aluno. Sistemas inteligentes capazes de analisar padrões de aprendizagem e recomendar conteúdos personalizados representam uma inovação significativa no campo educacional.
+        </p>
+        
+        <p>
+            Este trabalho tem como objetivo desenvolver um Sistema de Apoio ao Aprendizado Personalizado com Inteligência Artificial, destinado a estudantes do ensino médio. A plataforma utilizará algoritmos de machine learning para adaptar o conteúdo educacional às necessidades individuais de cada aluno, oferecendo recomendações personalizadas de materiais de estudo e exercícios.
+        </p>
+        
+        <p>
+            Justifica-se esta pesquisa pela necessidade de modernizar as práticas educacionais, tornando-as mais eficientes e inclusivas. A personalização do aprendizado pode contribuir significativamente para a redução das desigualdades educacionais, permitindo que cada estudante desenvolva seu potencial máximo no seu próprio ritmo.
+        </p>
+        
+        <p>
+            Os objetivos específicos deste trabalho incluem: investigar as principais técnicas de aprendizado de máquina aplicáveis à educação; desenvolver um protótipo funcional de sistema de recomendação educacional; avaliar a eficácia do sistema proposto por meio de testes com usuários reais; e analisar o impacto da personalização no processo de aprendizagem.
+        </p>
+        
+        <p>
+            A presente monografia está organizada em cinco capítulos. Após esta introdução, o segundo capítulo apresenta o referencial teórico, abordando conceitos de aprendizado personalizado, inteligência artificial na educação e sistemas de recomendação. O terceiro capítulo detalha a metodologia de pesquisa. O quarto capítulo descreve o desenvolvimento do sistema. O quinto capítulo apresenta os resultados e discussões, seguido pelas considerações finais.
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
