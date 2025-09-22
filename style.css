@@ -11,6 +11,9 @@
     --dark: #212529;
     --gray: #6c757d;
     --light-gray: #e9ecef;
+    --gradient-primary: linear-gradient(135deg, #4361ee, #3a0ca3);
+    --gradient-accent: linear-gradient(135deg, #f72585, #b5179e);
+    --gradient-success: linear-gradient(135deg, #4cc9f0, #4895ef);
 }
 
 * {
@@ -21,11 +24,12 @@
 }
 
 body {
-    background-color: #f5f7ff;
+    background: linear-gradient(135deg, #f5f7ff 0%, #e6e9ff 100%);
     color: var(--dark);
     line-height: 1.6;
-    overflow-x: hidden;
+    min-height: 100vh;
     position: relative;
+    overflow-x: hidden;
 }
 
 .background-animation {
@@ -169,7 +173,7 @@ nav ul li a:hover::after, nav ul li a.active::after {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    background: var(--gradient-primary);
     color: white;
     box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
 }
@@ -230,7 +234,7 @@ nav ul li a:hover::after, nav ul li a.active::after {
 }
 
 .highlight {
-    background: linear-gradient(135deg, var(--primary), var(--accent));
+    background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -284,7 +288,7 @@ nav ul li a:hover::after, nav ul li a.active::after {
 .card-1 {
     top: 0;
     left: 20%;
-    background: linear-gradient(135deg, #4361ee, #4895ef);
+    background: var(--gradient-primary);
     color: white;
     z-index: 3;
     animation: float 6s ease-in-out infinite;
@@ -353,7 +357,7 @@ nav ul li a:hover::after, nav ul li a.active::after {
 .feature-icon {
     width: 70px;
     height: 70px;
-    background: linear-gradient(135deg, var(--primary-light), var(--primary));
+    background: var(--gradient-primary);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -451,7 +455,7 @@ nav ul li a:hover::after, nav ul li a.active::after {
 }
 
 .flashcard-front {
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: var(--gradient-primary);
     color: white;
     text-align: center;
 }
@@ -679,7 +683,7 @@ nav ul li a:hover::after, nav ul li a.active::after {
 .deck-icon {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, var(--primary-light), var(--primary));
+    background: var(--gradient-primary);
     border-radius: 15px;
     display: flex;
     align-items: center;
@@ -723,7 +727,7 @@ nav ul li a:hover::after, nav ul li a.active::after {
 
 .progress {
     height: 100%;
-    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    background: var(--gradient-primary);
     border-radius: 4px;
     transition: width 0.5s ease;
 }
@@ -805,7 +809,4 @@ footer {
 .footer-section p {
     color: #ddd;
     line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.footer-section ul
+    margin-bottom
