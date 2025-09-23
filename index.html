@@ -17,105 +17,6 @@
         <div class="shape shape-4"></div>
     </div>
     
-    <!-- Modal de Login -->
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="modal-header">
-                <h2>Entrar na sua conta</h2>
-                <p>Continue seus estudos de onde parou</p>
-            </div>
-            <form class="auth-form" id="loginForm">
-                <div class="form-group">
-                    <label for="loginEmail">E-mail</label>
-                    <input type="email" id="loginEmail" placeholder="seu@email.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="loginPassword">Senha</label>
-                    <input type="password" id="loginPassword" placeholder="Sua senha" required>
-                </div>
-                <div class="form-options">
-                    <label class="checkbox-container">
-                        <input type="checkbox" id="rememberMe">
-                        <span class="checkmark"></span>
-                        Lembrar de mim
-                    </label>
-                    <a href="#" class="forgot-password">Esqueceu a senha?</a>
-                </div>
-                <button type="submit" class="btn btn-primary btn-large btn-full">
-                    <i class="fas fa-sign-in-alt"></i> Entrar
-                </button>
-                <div class="divider">
-                    <span>ou entre com</span>
-                </div>
-                <button type="button" class="btn btn-google" onclick="loginWithGoogle()">
-                    <i class="fab fa-google"></i> Continuar com Google
-                </button>
-            </form>
-            <div class="modal-footer">
-                <p>Não tem uma conta? <a href="#" class="switch-to-signup">Cadastre-se</a></p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal de Cadastro -->
-    <div id="signupModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <div class="modal-header">
-                <h2>Criar sua conta</h2>
-                <p>Junte-se a milhares de estudantes</p>
-            </div>
-            <form class="auth-form" id="signupForm">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="signupFirstName">Nome</label>
-                        <input type="text" id="signupFirstName" placeholder="Seu nome" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="signupLastName">Sobrenome</label>
-                        <input type="text" id="signupLastName" placeholder="Seu sobrenome" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="signupEmail">E-mail</label>
-                    <input type="email" id="signupEmail" placeholder="seu@email.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="signupPassword">Senha</label>
-                    <input type="password" id="signupPassword" placeholder="Crie uma senha forte" required>
-                    <div class="password-strength">
-                        <div class="strength-bar"></div>
-                        <span class="strength-text">Força da senha</span>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="signupConfirmPassword">Confirmar Senha</label>
-                    <input type="password" id="signupConfirmPassword" placeholder="Digite novamente sua senha" required>
-                </div>
-                <div class="form-options">
-                    <label class="checkbox-container">
-                        <input type="checkbox" id="acceptTerms" required>
-                        <span class="checkmark"></span>
-                        Concordo com os <a href="#">Termos de Serviço</a> e <a href="#">Política de Privacidade</a>
-                    </label>
-                </div>
-                <button type="submit" class="btn btn-primary btn-large btn-full">
-                    <i class="fas fa-user-plus"></i> Criar Conta
-                </button>
-                <div class="divider">
-                    <span>ou cadastre-se com</span>
-                </div>
-                <button type="button" class="btn btn-google" onclick="signupWithGoogle()">
-                    <i class="fab fa-google"></i> Continuar com Google
-                </button>
-            </form>
-            <div class="modal-footer">
-                <p>Já tem uma conta? <a href="#" class="switch-to-login">Fazer login</a></p>
-            </div>
-        </div>
-    </div>
-
     <!-- Header -->
     <header>
         <nav class="navbar">
@@ -131,20 +32,8 @@
                     <li><a href="#sobre" class="nav-link">Sobre</a></li>
                 </ul>
                 <div class="nav-buttons">
-                    <button class="btn btn-outline" id="loginBtn">Entrar</button>
-                    <button class="btn btn-primary" id="signupBtn">Cadastrar</button>
-                    <div class="user-menu" id="userMenu" style="display: none;">
-                        <div class="user-avatar">
-                            <img src="" alt="Avatar" id="userAvatar">
-                            <span id="userName">Usuário</span>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="dropdown-menu">
-                            <a href="#"><i class="fas fa-user"></i> Meu Perfil</a>
-                            <a href="#"><i class="fas fa-cog"></i> Configurações</a>
-                            <a href="#" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Sair</a>
-                        </div>
-                    </div>
+                    <button class="btn btn-outline">Entrar</button>
+                    <button class="btn btn-primary">Cadastrar</button>
                 </div>
                 <div class="hamburger">
                     <span></span>
@@ -195,13 +84,320 @@
             </div>
         </section>
 
-        <!-- Resto do conteúdo permanece igual -->
-        <!-- ... (o restante do HTML anterior) ... -->
+        <!-- Seção Recursos -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Por que Escolher o <span class="highlight">FlashStudy</span>?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                        <h3>Crie Flashcards</h3>
+                        <p>Adicione perguntas e respostas personalizadas com nosso editor intuitivo e fácil de usar.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>Organize em Baralhos</h3>
+                        <p>Agrupe seus flashcards por matéria, tema ou disciplina de maneira organizada.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Estudo Inteligente</h3>
+                        <p>Sistema de repetição espaçada para maximizar sua retenção de conhecimento.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Acompanhe Progresso</h3>
+                        <p>Estatísticas detalhadas mostram sua evolução e áreas que precisam de atenção.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Seção Flashcards -->
+        <section id="flashcards" class="flashcards-section section-hidden">
+            <div class="container">
+                <h2 class="section-title">Seus <span class="highlight">Flashcards</span></h2>
+                
+                <div class="flashcard-container">
+                    <div class="flashcard" onclick="flipCard(this)">
+                        <div class="flashcard-inner">
+                            <div class="flashcard-front">
+                                <div class="card-header">
+                                    <span class="card-category">Programação</span>
+                                    <span class="card-number">1/5</span>
+                                </div>
+                                <div class="card-content">
+                                    <h3>O que é HTML?</h3>
+                                    <p>Clique para ver a resposta</p>
+                                </div>
+                                <div class="card-hint">
+                                    <i class="fas fa-lightbulb"></i> Dica: Linguagem de marcação
+                                </div>
+                            </div>
+                            <div class="flashcard-back">
+                                <div class="card-content">
+                                    <h3>Resposta:</h3>
+                                    <p>HTML (HyperText Markup Language) é a linguagem de marcação padrão para criar páginas web. Ela define a estrutura e o conteúdo usando tags como &lt;h1&gt;, &lt;p&gt;, &lt;img&gt;, etc.</p>
+                                </div>
+                                <div class="card-actions">
+                                    <button class="action-btn easy" onclick="rateCard('easy')">
+                                        <i class="fas fa-smile"></i> Fácil
+                                    </button>
+                                    <button class="action-btn medium" onclick="rateCard('medium')">
+                                        <i class="fas fa-meh"></i> Médio
+                                    </button>
+                                    <button class="action-btn hard" onclick="rateCard('hard')">
+                                        <i class="fas fa-frown"></i> Difícil
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flashcard-controls">
+                        <button class="control-btn" onclick="prevCard()">
+                            <i class="fas fa-chevron-left"></i> Anterior
+                        </button>
+                        <div class="progress-indicator">
+                            <span class="current">1</span> / <span class="total">5</span>
+                        </div>
+                        <button class="control-btn" onclick="nextCard()">
+                            Próximo <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Criar Flashcard -->
+        <section class="create-flashcard">
+            <div class="container">
+                <h2 class="section-title">Criar Novo <span class="highlight">Flashcard</span></h2>
+                <div class="form-container">
+                    <div class="form-group">
+                        <label for="question">
+                            <i class="fas fa-question-circle"></i> Pergunta
+                        </label>
+                        <textarea id="question" placeholder="Digite a pergunta do flashcard..." rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="answer">
+                            <i class="fas fa-lightbulb"></i> Resposta
+                        </label>
+                        <textarea id="answer" placeholder="Digite a resposta do flashcard..." rows="5"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="category">
+                                <i class="fas fa-tag"></i> Categoria
+                            </label>
+                            <select id="category">
+                                <option value="">Selecione uma categoria</option>
+                                <option value="programming">Programação</option>
+                                <option value="math">Matemática</option>
+                                <option value="science">Ciências</option>
+                                <option value="history">História</option>
+                                <option value="language">Línguas</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="hint">
+                                <i class="fas fa-lightbulb"></i> Dica (Opcional)
+                            </label>
+                            <input type="text" id="hint" placeholder="Digite uma dica...">
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-large" onclick="addFlashcard()">
+                        <i class="fas fa-plus"></i> Adicionar Flashcard
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Baralhos -->
+        <section id="decks" class="decks-section section-hidden">
+            <div class="container">
+                <h2 class="section-title">Seus <span class="highlight">Baralhos</span></h2>
+                
+                <div class="decks-header">
+                    <div class="search-container">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Buscar baralhos...">
+                    </div>
+                    <button class="btn btn-primary" onclick="createNewDeck()">
+                        <i class="fas fa-plus"></i> Novo Baralho
+                    </button>
+                </div>
+                
+                <div class="decks-grid">
+                    <div class="deck-card" onclick="selectDeck('Programação')">
+                        <div class="deck-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="deck-info">
+                            <h3>Programação</h3>
+                            <p>15 flashcards</p>
+                            <div class="deck-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 75%"></div>
+                                </div>
+                                <span>75% dominado</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="deck-card" onclick="selectDeck('Matemática')">
+                        <div class="deck-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div class="deck-info">
+                            <h3>Matemática</h3>
+                            <p>12 flashcards</p>
+                            <div class="deck-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 60%"></div>
+                                </div>
+                                <span>60% dominado</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="deck-card" onclick="selectDeck('História')">
+                        <div class="deck-icon">
+                            <i class="fas fa-landmark"></i>
+                        </div>
+                        <div class="deck-info">
+                            <h3>História</h3>
+                            <p>8 flashcards</p>
+                            <div class="deck-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 45%"></div>
+                                </div>
+                                <span>45% dominado</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="deck-card" onclick="selectDeck('Ciências')">
+                        <div class="deck-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <div class="deck-info">
+                            <h3>Ciências</h3>
+                            <p>10 flashcards</p>
+                            <div class="deck-progress">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 30%"></div>
+                                </div>
+                                <span>30% dominado</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="deck-card create-new" onclick="createNewDeck()">
+                        <div class="deck-icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="deck-info">
+                            <h3>Novo Baralho</h3>
+                            <p>Criar novo conjunto</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Sobre -->
+        <section id="sobre" class="about-section section-hidden">
+            <div class="container">
+                <h2 class="section-title">Sobre o <span class="highlight">FlashStudy</span></h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>O FlashStudy foi desenvolvido como projeto de TCC para revolucionar a maneira como os estudantes utilizam flashcards para aprendizado.</p>
+                        <p>Utilizamos técnicas modernas de repetição espaçada e design intuitivo para maximizar a eficiência do seu estudo.</p>
+                        <div class="about-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Interface moderna e responsiva</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Algoritmo de repetição espaçada</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Relatórios de progresso detalhados</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check"></i>
+                                <span>Suporte multiplataforma</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Estudantes usando flashcards">
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!-- Footer -->
     <footer>
-        <!-- ... (footer permanece igual) ... -->
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>FlashStudy</span>
+                    </div>
+                    <p>Transformando a maneira como você estuda e retém conhecimento.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Recursos</h3>
+                    <ul>
+                        <li><a href="#flashcards">Flashcards</a></li>
+                        <li><a href="#decks">Baralhos</a></li>
+                        <li><a href="#">Modo de Estudo</a></li>
+                        <li><a href="#">Relatórios</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Suporte</h3>
+                    <ul>
+                        <li><a href="#">Central de Ajuda</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Tutoriais</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 FlashStudy. Todos os direitos reservados.</p>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>
