@@ -156,11 +156,17 @@
                             <i class="fas fa-chevron-down"></i>
                         </div>
                         <div class="dropdown-menu" id="userDropdown">
-                            <a href="#" class="dropdown-item">
-                                <i class="fas fa-user"></i> Meu Perfil
+                            <a href="#" class="dropdown-item" onclick="redirectToFlashcards()">
+                                <i class="fas fa-play"></i> Começar a Estudar
+                            </a>
+                            <a href="#" class="dropdown-item" onclick="redirectToFlashcards('decks')">
+                                <i class="fas fa-layer-group"></i> Ver Baralhos
+                            </a>
+                            <a href="#" class="dropdown-item" onclick="redirectToFlashcards('create')">
+                                <i class="fas fa-plus"></i> Criar Flashcards
                             </a>
                             <a href="#" class="dropdown-item">
-                                <i class="fas fa-cog"></i> Configurações
+                                <i class="fas fa-user"></i> Meu Perfil
                             </a>
                             <a href="#" class="dropdown-item" id="logoutBtn">
                                 <i class="fas fa-sign-out-alt"></i> Sair
@@ -200,10 +206,55 @@
                         <div class="welcome-card">
                             <h3>Olá, <span id="welcomeName">Usuário</span>!</h3>
                             <p>Pronto para continuar seus estudos?</p>
-                            <button class="btn btn-primary" onclick="startStudying()">
+                            <button class="btn btn-primary btn-large" onclick="redirectToFlashcards()">
                                 <i class="fas fa-play"></i> Começar a Estudar
                             </button>
+                            <div class="welcome-options">
+                                <button class="btn btn-outline" onclick="redirectToFlashcards('decks')">
+                                    <i class="fas fa-layer-group"></i> Ver Meus Baralhos
+                                </button>
+                                <button class="btn btn-outline" onclick="redirectToFlashcards('create')">
+                                    <i class="fas fa-plus"></i> Criar Flashcards
+                                </button>
+                            </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Recursos -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">O que você pode fazer no <span class="highlight">FlashStudy</span>?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-plus-circle"></i>
+                        </div>
+                        <h3>Criar Flashcards</h3>
+                        <p>Crie cartões de estudo personalizados com perguntas e respostas</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>Organizar Baralhos</h3>
+                        <p>Agrupe seus flashcards por matéria, tema ou disciplina</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Estudar Inteligente</h3>
+                        <p>Sistema de repetição espaçada para melhor aprendizado</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Acompanhar Progresso</h3>
+                        <p>Veja suas estatísticas e evolução nos estudos</p>
                     </div>
                 </div>
             </div>
