@@ -68,7 +68,12 @@ class AuthSystem {
 
         if (this.login(email, password)) {
             this.closeModal();
-            this.showNotification('Login realizado com sucesso!', 'success');
+            this.showNotification('Login realizado! Redirecionando para o FlashStudy...', 'success');
+            
+            // Redirecionar após 2 segundos
+            setTimeout(() => {
+                redirectToFlashcards();
+            }, 2000);
         }
     }
 
@@ -88,7 +93,12 @@ class AuthSystem {
 
         if (this.signup(formData)) {
             this.closeModal();
-            this.showNotification('Conta criada com sucesso!', 'success');
+            this.showNotification('Conta criada! Redirecionando para o FlashStudy...', 'success');
+            
+            // Redirecionar após 2 segundos
+            setTimeout(() => {
+                redirectToFlashcards();
+            }, 2000);
         }
     }
 
@@ -181,11 +191,16 @@ class AuthSystem {
         localStorage.setItem('flashstudy_current_user', JSON.stringify(googleUser));
         this.updateUI();
         this.closeModal();
-        this.showNotification('Login com Google realizado com sucesso!', 'success');
+        this.showNotification('Login com Google realizado! Redirecionando...', 'success');
+        
+        // Redirecionar após 2 segundos
+        setTimeout(() => {
+            redirectToFlashcards();
+        }, 2000);
     }
 
     signupWithGoogle() {
-        this.loginWithGoogle(); // Mesma função para simplificar
+        this.loginWithGoogle();
     }
 
     logout() {
@@ -344,23 +359,65 @@ class AuthSystem {
     }
 }
 
-// Funções Globais
+// Função principal de redirecionamento
+function redirectToFlashcards(section = '') {
+    // Mostrar tela de carregamento
+    showRedirectingScreen();
+    
+    // URL do seu site de flashcards
+    const baseUrl = 'https://vitordiamantenegro.github.io/TCC/';
+    
+    let redirectUrl = baseUrl;
+    
+    // Adicionar seção específica se fornecida
+    if (section) {
+        redirectUrl += `#${section}`;
+    }
+    
+    // Adicionar informações do usuário (opcional)
+    const user = authSystem.currentUser;
+    if (user) {
+        // Codificar informações do usuário para passar para o outro site
+        const userData = btoa(JSON.stringify({
+            id: user.id,
+            name: user.firstName,
+            email: user.email
+        }));
+        redirectUrl += `?user=${userData}`;
+    }
+    
+    // Redirecionar após 2 segundos (para mostrar a animação)
+    setTimeout(() => {
+        window.location.href = redirectUrl;
+    }, 2000);
+}
+
+// Função para mostrar tela de redirecionamento
+function showRedirectingScreen() {
+    const redirectingHTML = `
+        <div class="redirecting" id="redirectingScreen">
+            <div class="redirecting-spinner"></div>
+            <h2>Redirecionando para o FlashStudy</h2>
+            <p>Preparando sua experiência de estudo...</p>
+        </div>
+    `;
+    
+    document.body.insertAdjacentHTML('beforeend', redirectingHTML);
+}
+
+// Função para alternar o dropdown do usuário
+function toggleUserDropdown() {
+    const dropdown = document.getElementById('userDropdown');
+    dropdown.classList.toggle('show');
+}
+
+// Funções globais para login com Google
 function loginWithGoogle() {
     authSystem.loginWithGoogle();
 }
 
 function signupWithGoogle() {
     authSystem.signupWithGoogle();
-}
-
-function toggleUserDropdown() {
-    const dropdown = document.getElementById('userDropdown');
-    dropdown.classList.toggle('show');
-}
-
-function startStudying() {
-    authSystem.showNotification('Redirecionando para a área de estudo...', 'info');
-    // Aqui você pode redirecionar para a página de estudo
 }
 
 // Fechar dropdown ao clicar fora
